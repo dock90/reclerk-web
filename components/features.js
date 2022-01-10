@@ -16,7 +16,9 @@ const Features = () => (
             View expiring background checks
           </h3>
           <p className="mt-3 text-lg text-gray-500">
-            Reclerk visually highlights background checks that are expiring soon. You can quickly take action on high priority renewals and avoid delays.
+            Reclerk visually highlights background checks that are expiring
+            soon. You can quickly take action on high priority renewals and
+            avoid delays.
           </p>
         </div>
 
@@ -37,7 +39,9 @@ const Features = () => (
               Quickly find and update docs
             </h3>
             <p className="mt-3 text-lg text-gray-500">
-              No more searching through filing cabinets and trying to find the right document. Reclerk's table structure and editing features make it easy to find and update documents.
+              No more searching through filing cabinets and trying to find the
+              right document. Reclerk's table structure and editing features
+              make it easy to find and update documents.
             </p>
           </div>
 
@@ -58,7 +62,9 @@ const Features = () => (
             Securely store your employee data
           </h3>
           <p className="mt-3 text-lg text-gray-500">
-            Reclerk stores all your employee data in a secure database. No more storing sensitive information in in open filing cabinets or in your job trailers.
+            Reclerk stores all your employee data in a secure database. No more
+            storing sensitive information in in open filing cabinets or in your
+            job trailers.
           </p>
         </div>
 
