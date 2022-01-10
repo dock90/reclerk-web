@@ -112,7 +112,7 @@ export default function Home() {
                 <div className="hidden md:flex md:space-x-10">
                   {navigation.map((item) => (
                     <Link href={item.href} key={item.name}>
-                      <a className="font-medium text-gray-500 hover:text-gray-900">
+                      <a className="font-medium text-emerald-800 hover:text-emerald-700">
                         {item.name}
                       </a>
                     </Link>
@@ -121,7 +121,7 @@ export default function Home() {
                 <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
                   <span className="inline-flex rounded-md shadow">
                     <Link href="/signup">
-                      <a className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500">
+                      <a className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-emerald-800 bg-white hover:text-emerald-700">
                         Sign up
                       </a>
                     </Link>
@@ -162,14 +162,14 @@ export default function Home() {
                   <div className="px-2 pt-2 pb-3 space-y-1">
                     {navigation.map((item) => (
                       <Link key={item.name} href={item.href}>
-                        <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                        <a className="block px-3 py-2 rounded-md text-base font-medium text-emerald-800 hover:text-emerald-700 hover:bg-gray-50">
                           {item.name}
                         </a>
                       </Link>
                     ))}
                   </div>
                   <Link href="/signup">
-                    <a className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700">
+                    <a className="block w-full px-5 py-3 text-center font-medium text-emerald-800 bg-gray-50 hover:bg-gray-100 hover:text-emerald-700">
                       Sign up
                     </a>
                   </Link>
