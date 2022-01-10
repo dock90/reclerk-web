@@ -1,11 +1,9 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import Link from 'next/link';
+import { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
-const navigation = [
-  { name: 'Pricing', href: '#' }
-]
+const navigation = [{ name: 'Pricing', href: '/pricing' }];
 
 export default function Home() {
   return (
@@ -29,10 +27,21 @@ export default function Home() {
                   height={20}
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                  <rect
+                    x={0}
+                    y={0}
+                    width={4}
+                    height={4}
+                    className="text-gray-200"
+                    fill="currentColor"
+                  />
                 </pattern>
               </defs>
-              <rect width={404} height={784} fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
+              <rect
+                width={404}
+                height={784}
+                fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)"
+              />
             </svg>
             <svg
               className="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4"
@@ -50,10 +59,21 @@ export default function Home() {
                   height={20}
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                  <rect
+                    x={0}
+                    y={0}
+                    width={4}
+                    height={4}
+                    className="text-gray-200"
+                    fill="currentColor"
+                  />
                 </pattern>
               </defs>
-              <rect width={404} height={784} fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
+              <rect
+                width={404}
+                height={784}
+                fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)"
+              />
             </svg>
           </div>
         </div>
@@ -61,17 +81,22 @@ export default function Home() {
         <div className="relative pt-6 pb-16 sm:pb-24">
           <Popover>
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-              <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+              <nav
+                className="relative flex items-center justify-between sm:h-10 md:justify-center"
+                aria-label="Global"
+              >
                 <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
-                    <a href="#">
-                      <span className="sr-only">Reclerk</span>
-                      <img
-                        className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                        alt=""
-                      />
-                    </a>
+                    <Link href="/">
+                      <a>
+                        <span className="sr-only">Reclerk</span>
+                        <img
+                          className="h-8 w-auto sm:h-10"
+                          src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                          alt=""
+                        />
+                      </a>
+                    </Link>
                     <div className="-mr-2 flex items-center md:hidden">
                       <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Open main menu</span>
@@ -82,19 +107,20 @@ export default function Home() {
                 </div>
                 <div className="hidden md:flex md:space-x-10">
                   {navigation.map((item) => (
-                    <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900">
-                      {item.name}
-                    </a>
+                    <Link href={item.href} key={item.name}>
+                      <a className="font-medium text-gray-500 hover:text-gray-900">
+                        {item.name}
+                      </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
                   <span className="inline-flex rounded-md shadow">
-                    <a
-                      href="#"
-                      className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500"
-                    >
-                      Sign up
-                    </a>
+                    <Link href="/signup">
+                      <a className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500">
+                        Sign up
+                      </a>
+                    </Link>
                   </span>
                 </div>
               </nav>
@@ -131,21 +157,18 @@ export default function Home() {
                   </div>
                   <div className="px-2 pt-2 pb-3 space-y-1">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                      >
-                        {item.name}
-                      </a>
+                      <Link key={item.name} href={item.href}>
+                        <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+                          {item.name}
+                        </a>
+                      </Link>
                     ))}
                   </div>
-                  <a
-                    href="#"
-                    className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700"
-                  >
-                    Sign up
-                  </a>
+                  <Link href="/signup">
+                    <a className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700">
+                      Sign up
+                    </a>
+                  </Link>
                 </div>
               </Popover.Panel>
             </Transition>
@@ -158,8 +181,9 @@ export default function Home() {
                 <span className="block text-indigo-600">online business</span>
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                fugiat veniam occaecat fugiat aliqua.
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+                fugiat aliqua.
               </p>
             </div>
           </div>
@@ -186,10 +210,18 @@ export default function Home() {
           </h2>
           <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
             <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img className="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple" />
+              <img
+                className="h-12"
+                src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
+                alt="Tuple"
+              />
             </div>
             <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img className="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage" />
+              <img
+                className="h-12"
+                src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
+                alt="Mirage"
+              />
             </div>
             <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
               <img
@@ -216,5 +248,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }
