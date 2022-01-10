@@ -17,11 +17,12 @@ const Header = () => (
             <Link href="/">
               <a>
                 <span className="sr-only">Reclerk</span>
-                <img
+                {/* <img
                   className="h-8 w-auto sm:h-10"
                   src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                   alt=""
-                />
+                /> */}
+                <h2 className="text-3xl font-bold text-emerald-800">Reclerk</h2>
               </a>
             </Link>
             <div className="-mr-2 flex items-center md:hidden">
